@@ -1,15 +1,4 @@
 <template>
-  <!-- <div id="app"> -->
-  <!-- <div class="container">
-      <SidebarComponent />
-      <div class="main-content">
-        <HeaderComponent />
-        <div class="tabledata"><TableComponentNew /></div>
-      </div>
-      
-    </div> -->
-  <!-- </div> -->
-  <!-- <SignUpcomponent /> -->
   <router-view />
 </template>
 
@@ -23,11 +12,8 @@ export default {
   name: "App",
   // components: {
   // SignUpcomponent,
-  //   // HeaderComponent,
-  //   // SidebarComponent,
-  //   // TableComponentNew,
   // },
-};
+};  
 </script>
 
 <style scoped>

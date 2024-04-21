@@ -19,6 +19,7 @@
           <img src="../../../public/biryani.jpg" alt="Tomato Chicken Biryani" />
           <h3>Tomato Chicken Biryani</h3>
           <p>$100</p>
+          <button>Taste</button>
         </div>
         <div class="special-item">
           <img
@@ -27,11 +28,19 @@
           />
           <h3>Tomato Salad Kheema</h3>
           <p>$150</p>
+          <button>Taste</button>
         </div>
         <div class="special-item">
           <img src="../../../public/paneer.jpg" alt="Paneer Kheema Rice" />
           <h3>Paneer Kheema Rice</h3>
           <p>$120</p>
+          <button>Taste</button>
+        </div>
+        <div class="special-item">
+          <img src="../../../public/kheema.jpg" alt="Paneer Kheema Rice" />
+          <h3>Flower Kheema rice</h3>
+          <p>$130</p>
+          <button>Taste</button>
         </div>
       </div>
     </div>
@@ -114,27 +123,34 @@ export default {
 .specials-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .special-item {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 60px;
-  height: 200px;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
   border: 2px solid black;
-  border-radius: 55px;
+  border-radius: 20px;
+  width: 200px;
 }
 
 .special-item img {
-  width: 500px;
+  width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 10px;
+  /* border-radius: 30px; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .special-item h3 {
-  margin-top: 120px;
+  margin-bottom: 10px;
+}
+.special-item:hover {
+  transform: scale(1.1);
 }
 .specials-container :hover {
   cursor: pointer;
@@ -143,6 +159,19 @@ export default {
 }
 
 .special-item p {
-  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.special-item button {
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 170px;
+  background-color: rgb(104, 201, 172);
+  border-radius: 20px;
+}
+.special-item button:hover {
+  transform: scale(0.9);
+  background-color: white;
 }
 </style>

@@ -1,16 +1,18 @@
 <template>
-  <div class="form-container">
-    <!-- <div><img src="../assets/sudhi.jpg" alt="" /></div> -->
-    <div class="form_temp">
-      <h1>Log In</h1>
-      <input type="email" v-model="email" placeholder="Enter Your Email" />
-      <input
-        type="password"
-        v-model="password"
-        placeholder="Enter Your Password"
-      />
-      <button v-on:click="login">Login</button>
-      <p><router-link to="/sign-up">signup</router-link></p>
+  <div class="main-container">
+    <div class="form-container">
+      <!-- <div><img src="../assets/sudhi.jpg" alt="" /></div> -->
+      <div class="form_temp">
+        <h1>User LogIn</h1>
+        <input type="email" v-model="email" placeholder="Enter Your Email" />
+        <input
+          type="password"
+          v-model="password"
+          placeholder="Enter Your Password"
+        />
+        <button v-on:click="login">Login</button>
+        <p><router-link to="/sign-up">signup</router-link></p>
+      </div>
     </div>
   </div>
 </template>
@@ -51,6 +53,9 @@ export default {
 </script>
 
 <style scoped>
+.main-container {
+  background-image: url();
+}
 .form-container {
   display: flex;
   justify-content: center;
