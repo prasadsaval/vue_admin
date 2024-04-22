@@ -1,6 +1,5 @@
 <template>
   <div class="form-container">
-    <!-- <div><img src="../assets/sudhi.jpg" alt="" /></div> -->
     <div class="form_temp">
       <h1>Sign Up</h1>
       <input type="text" v-model="name" placeholder="Enter Your Name" />
@@ -11,10 +10,11 @@
         placeholder="Enter Your Password"
       />
       <button v-on:click="submitForm()">Submit</button>
-      <p><router-link to="/login">login</router-link></p>
+      <p><router-link to="/login">Login</router-link></p>
     </div>
   </div>
 </template>
+
 <script>
 import axios from "axios";
 export default {
@@ -63,43 +63,50 @@ export default {
   justify-content: center;
   align-items: center;
   height: 95vh;
-  /* background-color: aqua; */
 }
 
 .form_temp {
   text-align: center;
   background-color: #a89399;
-  height: auto;
   border-radius: 20px;
-  width: 30%;
-  position: relative;
-  top: 0;
+  width: 80%;
+  max-width: 300px;
+  padding: 30px;
 }
 
-.form_temp input {
-  height: 40px;
-  width: 200px;
-  margin-top: 15px;
-  padding: 5px;
-  padding-left: 100px;
-  display: block;
-  border-radius: 20px;
-  margin-left: 45px;
+.form_temp h1 {
+  margin-top: 0;
 }
 .form_temp input:hover {
   border-block-color: red;
 }
 
+.form_temp input {
+  height: 40px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+
 .form_temp button {
   background-color: #57b846;
   height: 40px;
-  width: 300px;
+  width: 100%;
   margin-top: 20px;
+  margin-left: 8px;
+  cursor: pointer;
 }
-div img {
-  height: 30%;
-  width: 160px;
-  border-radius: 20px;
-  margin-bottom: 50px;
+
+.form_temp p {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .form_temp {
+    width: 50%;
+  }
 }
 </style>

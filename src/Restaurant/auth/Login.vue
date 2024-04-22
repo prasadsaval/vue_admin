@@ -53,9 +53,6 @@ export default {
 </script>
 
 <style scoped>
-.main-container {
-  background-image: url();
-}
 .form-container {
   display: flex;
   justify-content: center;
@@ -63,26 +60,26 @@ export default {
   height: 95vh;
   /* background-color: aqua; */
 }
-
 .form_temp {
   text-align: center;
   background-color: #a89399;
-  height: auto;
   border-radius: 20px;
-  width: 30%;
-  position: relative;
-  /* top: 0; */
+  width: 80%;
+  max-width: 300px;
+  padding: 30px;
+}
+.form_temp p {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .form_temp input {
   height: 40px;
-  width: 200px;
+  width: 100%;
   margin-top: 15px;
   padding: 5px;
-  padding-left: 100px;
-  display: block;
   border-radius: 20px;
-  margin-left: 45px;
+  text-align: center;
 }
 .form_temp input:hover {
   border-block-color: red;
@@ -91,7 +88,9 @@ export default {
 .form_temp button {
   background-color: #57b846;
   height: 40px;
-  width: 300px;
+  width: 100%;
   margin-top: 20px;
+  margin-left: 8px;
+  cursor: pointer;
 }
 </style>

@@ -16,10 +16,11 @@ export default {
 };  
 </script>
 
-<style scoped>
+<style>
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 /* .container {
   display: flex;

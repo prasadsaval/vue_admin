@@ -78,10 +78,12 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
+  padding: 20px;
 }
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 .container h2 {
   margin-right: 400px;
@@ -106,9 +108,12 @@ export default {
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
+  flex-wrap: wrap; /* it will come one another one by one if the screen is small */
 }
 .menu-row li {
   background-color: rgb(162, 162, 184);
+  /* width: 20%; */
+  margin-bottom: 20px;
 }
 
 .menu-item {
@@ -116,6 +121,7 @@ export default {
   padding: 50px;
   border: 1px solid #070707;
   border-radius: 90px;
+  flex-direction: column;
 }
 
 .menu-item-image img {
