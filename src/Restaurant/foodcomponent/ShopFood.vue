@@ -1,6 +1,7 @@
 <template>
-<!-- <h2>Our Specials Recipes</h2> -->
+  <!-- <h2>Our Specials Recipes</h2> -->
   <div class="home-section">
+    <h2 class="specials-title">Our Specials Recipes</h2>
     <div class="specials-container">
       <div class="special-item">
         <img src="../../../public/biryani.jpg" alt="Tomato Chicken Biryani" />
@@ -32,6 +33,7 @@
 
 <script>
 export default {
+  name: "ShopComponent",
   methods: {
     tasteItem(itemName) {
       console.log("Tasting " + itemName);
@@ -43,12 +45,19 @@ export default {
 <style>
 .home-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("/public/foods.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  min-height: 600px;
+  padding-top: 20px;
+}
+.specials-title {
+  font-size: 30px;
+  margin-bottom: 70px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home-section h2 {

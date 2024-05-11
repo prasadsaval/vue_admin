@@ -1,9 +1,9 @@
 <template>
   <div class="main-container">
-    <h2>What People are saying about us.</h2>
+    <h2 class="animated fadeInDown">What People are saying about us.</h2>
     <div class="container">
       <v-card
-        class="review-card"
+        class="review-card animated slideInLeft"
         v-for="(review, index) in reviews"
         :key="index"
       >
@@ -127,5 +127,38 @@ export default {
   color: aliceblue;
   /* margin-right: 550px; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/* Animation Classes */
+.animated {
+  animation-duration: 1s;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

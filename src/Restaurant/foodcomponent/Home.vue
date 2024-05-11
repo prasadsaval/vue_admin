@@ -2,19 +2,28 @@
   <section>
     <RestaurantHeader class="sticky" />
     <div class="home">
-      <h1>Welcome to Our Triveni</h1>
-      <p>
-        "Food is not just sustenance; it's a symphony of flavors, a canvas of
-        creativity, and a journey of exploration. Every dish tells a story,
-        every ingredient a character, and every bite a revelation. To truly
-        savor life is to savor every delicious moment at the table."
-      </p>
-      <p>Discover delicious dishes from our menu</p>
-      <router-link to="/menu" class="btn">View Menu</router-link> <br />
-      <router-link to="/menu" class="btn">Book Your table</router-link>
+      <div class="text-container animated fadeInDown">
+        <h1>Welcome to Our Triveni</h1>
+        <p>
+          "Food is not just sustenance; it's a symphony of flavors, a canvas of
+          creativity, and a journey of exploration. Every dish tells a story,
+          every ingredient a character, and every bite a revelation. To truly
+          savor life is to savor every delicious moment at the table."
+        </p>
+        <p>Discover delicious dishes from our menu</p>
+      </div>
+      <router-link to="/menu" class="btn animated slideInLeft"
+        >View Menu</router-link
+      >
+      <br />
+      <router-link to="/Book-table" class="btn animated slideInLeft"
+        >Book Your table</router-link
+      >
     </div>
+
     <shop-component />
     <Aboutuscomponent />
+    <contact-component />
   </section>
 </template>
 
@@ -22,13 +31,20 @@
 import RestaurantHeader from "../Header/Navbar.vue";
 import ShopComponent from "../foodcomponent/ShopFood.vue";
 import Aboutuscomponent from "../About/Aboutus.vue";
+import ContactComponent from "../About/ContactComponent.vue";
 export default {
   name: "HomeComponent",
   components: {
     RestaurantHeader,
     ShopComponent,
     Aboutuscomponent,
+    ContactComponent,
   },
+  // data() {
+  //   return {
+  //     showContent: false,
+  //   };
+  // },
   mounted() {
     let user = localStorage.getItem("user");
     if (user == null) {
@@ -39,6 +55,21 @@ export default {
 </script>
 
 <style scoped>
+/* .slide-in-delay-enter-active .text-container {
+  opacity: 1;
+  transform: translateY(0);
+} */
+.animated {
+  animation-duration: 1s;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
 .home {
   text-align: center;
   padding: 50px;
@@ -46,6 +77,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px;
+  overflow: hidden;
 }
 .home h1 {
   color: white;
@@ -82,5 +114,27 @@ export default {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* animations  */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

@@ -3,10 +3,10 @@
     <nav class="navbar">
       <h2>Triveni</h2>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/shop">Shop</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/contact">Contact Us</router-link></li>
       </ul>
       <div class="button-check">
         <button class="reservation-btn">Make a Reservation</button>

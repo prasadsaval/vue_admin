@@ -20,7 +20,7 @@ export default {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 /* .container {
   display: flex;
