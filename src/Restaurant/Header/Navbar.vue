@@ -17,12 +17,15 @@
 </template>
 
 <script>
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 export default {
   name: "RestaurantHeader",
   methods: {
-    logout() {
+    async logout() {
       localStorage.clear();
       this.$router.push({ name: "LogIn" });
+      toast.success("Logout SuccessFully", { autoClose: 3000 });
     },
   },
 };

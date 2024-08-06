@@ -17,9 +17,9 @@
             <h4 class="footer-heading">Contact Us</h4>
             <address class="footer-address">
               <p>Contact No:8882242445</p>
-              <p>123 Main Street</p>
-              <p>City, State, Zip Code</p>
-              <p>Phone: 123-456-7890</p>
+              <p>13 Main Street Andheri</p>
+              <p>Mumbai, Maharashtra, 423243</p>
+              <p>Phone: 423-446-7590</p>
               <p>
                 Email:
                 <a href="mailto:triveni@restaurant.com"

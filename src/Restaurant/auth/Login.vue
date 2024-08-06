@@ -19,6 +19,8 @@
 
 <script>
 import axios from "axios";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 export default {
   name: "LoginComponent",
   data() {
@@ -27,16 +29,19 @@ export default {
   methods: {
     async login() {
       if (!this.email) {
-        alert("Email is mandatory Field");
+        toast.error("Email is mandatory Field", { autoClose: 3000 });
         return;
       }
       if (!this.password) {
-        alert("Password is mandatory Field");
+        toast.error("Password is mandatory Field", { autoClose: 3000 });
         return;
       }
       let result = await axios.get(
         `http://localhost:3000/users?email=${this.email}&password=${this.password}`
       );
+      if (result.status == 200) {
+        toast.success("You Are SuccessFully Login", { autoClose: 3000 });
+      }
       if (result.status == 200 && result.data.length > 0) {
         localStorage.setItem("user", JSON.stringify(result.data[0]));
         this.$router.push({ name: "Home" });
